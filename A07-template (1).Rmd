@@ -270,7 +270,6 @@ We perform the full outer join and then use `haversine()` to compute the distanc
 ```{r}
 
 StationPairs <- merge(Simple, Simple2, by = NULL)
-
 PairDistances <-
   StationPairs %>%
   mutate(distance = haversine(lat, long, lat2, long2)) %>%
